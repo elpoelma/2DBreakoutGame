@@ -62,6 +62,7 @@
             }
         }
         function touchHandler(event){
+            event.preventDefault();
             var relativeX = event.changedTouches[0].pageX - canvas.offsetLeft;
             if(relativeX > paddleWidth/2 && relativeX < canvas.width - paddleWidth/2){
                 paddleX = relativeX - paddleWidth/2;
